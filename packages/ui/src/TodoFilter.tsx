@@ -1,5 +1,7 @@
+import type { TodoFilter } from '@todo-prep/proto';
+
 type Props = {
-  filterTodos: (filterString: string) => void;
+  filterTodos: (filterString: TodoFilter) => void;
 };
 
 export function TodoFilter({ filterTodos }: Props) {

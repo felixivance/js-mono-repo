@@ -142,6 +142,9 @@ importers:
 
   packages/ui:
     dependencies:
+      '@todo-prep/proto':
+        specifier: workspace:*
+        version: link:../proto
       react:
         specifier: ^18 || ^19
         version: 19.2.5
