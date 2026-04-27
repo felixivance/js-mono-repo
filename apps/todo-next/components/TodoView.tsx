@@ -5,7 +5,7 @@ import type { Todo } from '@todo-prep/proto';
 import { TodoForm } from '@/components/TodoForm';
 import { TodoList } from '@/components/TodoList';
 
-import { TodoStats, TodoFilter } from '@todo-prep/ui';
+import { TodoStats, TodoFilterComponent } from '@todo-prep/ui';
 
 export function TodoView({ todos }: { todos: Todo[] }) {
   const [filterBy, setFilterBy] = useState<'all' | 'pending' | 'completed'>(
@@ -26,11 +26,7 @@ export function TodoView({ todos }: { todos: Todo[] }) {
         completedTodosCount={completedCount}
         allTodosCount={todos.length}
       />
-      <TodoFilter
-        filterTodos={(text) =>
-          setFilterBy(text as 'all' | 'pending' | 'completed')
-        }
-      />
+      <TodoFilterComponent filterTodos={(text) => setFilterBy(text)} />
       <TodoForm />
       <TodoList todos={filteredTodos} />
     </div>

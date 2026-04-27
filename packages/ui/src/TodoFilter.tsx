@@ -4,7 +4,7 @@ type Props = {
   filterTodos: (filterString: TodoFilter) => void;
 };
 
-export function TodoFilter({ filterTodos }: Props) {
+export function TodoFilterComponent({ filterTodos }: Props) {
   return (
     // create 3 buttons to filter the todos by status: All, Pending, Completed using typescript and tailwindcss
     <div className="flex gap-4 my-2">
